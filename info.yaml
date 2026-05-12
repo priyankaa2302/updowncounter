@@ -23,7 +23,7 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "DIR (1=UP, 0=DOWN)"
+  ui[0]: "dir (1=up, 0=down)"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -33,14 +33,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "COUNT[0]"
-  uo[1]: "COUNT[1]"
-  uo[2]: "COUNT[2]"
-  uo[3]: "COUNT[3]"
-  uo[4]: "COUNT[4]"
-  uo[5]: "COUNT[5]"
-  uo[6]: "COUNT[6]"
-  uo[7]: "COUNT[7]"
+  uo[0]: "count[0]"
+  uo[1]: "count[1]"
+  uo[2]: "count[2]"
+  uo[3]: "count[3]"
+  uo[4]: "count[4]"
+  uo[5]: "count[5]"
+  uo[6]: "count[6]"
+  uo[7]: "count[7]"
 
   # Bidirectional pins
   uio[0]: ""
@@ -50,7 +50,6 @@ pinout:
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
-  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
