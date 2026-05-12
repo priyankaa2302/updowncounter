@@ -26,7 +26,7 @@ module tb ();
 `endif
 
   // DUT: Up/Down Counter
-  tt_um_example user_project (
+  tt_um_updowncounter user_project (
 
 `ifdef GL_TEST
       .VPWR(VPWR),
