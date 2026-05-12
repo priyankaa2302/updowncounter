@@ -1,20 +1,17 @@
-<!---
+How it works
+This is an 8-bit up/down counter. On every rising clock edge:
+ui[0] = 1 → count increases by 1
+ui[0] = 0 → count decreases by 1
+rst_n = 0 → counter resets to 0
+Output uo[7:0] shows the current count (with wraparound at 0–255).
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+How to test
+Set rst_n = 0, then 1 → output becomes 0
+Set ui[0] = 1 → observe counting up
+Set ui[0] = 0 → observe counting down
+Check wraparound at 255 → 0 and 0 → 255
+View uo[7:0] in simulation or LEDs
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
-## How it works
-
-Explain how your project works
-
-## How to test
-
-Explain how to use your project
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+External hardware
+None required.
+Optional: connect uo[7:0] to LEDs to see the binary count.
