@@ -28,9 +28,7 @@ module tb;
         $dumpvars(0, tb);
     end
 
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;
-    end
+    initial clk = 0;
+    always #5 clk = ~clk;
 
 endmodule
