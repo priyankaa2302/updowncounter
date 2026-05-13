@@ -17,17 +17,13 @@ module tt_um_updowncounter (
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n)
             count <= 8'd0;
-        else if (ena) begin
-            if (ui_in[0] == 1'b1)
-                count <= count + 1'b1;
-            else
-                count <= count - 1'b1;
-        end
+        else if (ena)
+            count <= ui_in[0] ? (count + 1'b1) : (count - 1'b1);
     end
 
     assign uo_out  = count;
-    assign uio_out = 8'b0;
-    assign uio_oe  = 8'b0;
+    assign uio_out = 8'd0;
+    assign uio_oe  = 8'd0;
 
 endmodule
 
