@@ -1,5 +1,4 @@
 `timescale 1ns/1ps
-`default_nettype none
 
 module tb;
 
@@ -29,27 +28,9 @@ module tb;
         $dumpvars(0, tb);
     end
 
-    always #5 clk = ~clk;
-
     initial begin
         clk = 0;
-        rst_n = 0;
-        ena = 1;
-        ui_in = 0;
-        uio_in = 0;
-
-        #20;
-        rst_n = 1;
-
-        ui_in[0] = 1;
-        #100;
-
-        ui_in[0] = 0;
-        #100;
-
-        $finish;
+        forever #5 clk = ~clk;
     end
 
 endmodule
-
-`default_nettype wire
