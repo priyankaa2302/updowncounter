@@ -19,9 +19,9 @@ module tt_um_updowncounter (
             count <= 8'd0;
         else if (ena) begin
             if (ui_in[0])
-                count <= count + 1'b1;
+                count <= count + 8'd1;
             else
-                count <= count - 1'b1;
+                count <= count - 8'd1;
         end
     end
 
